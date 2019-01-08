@@ -9,8 +9,7 @@ public class DBUtil {
 
 	public static String getDataFromDatabase() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/denmark", "roger",
-					"roger");
+			Connection con = DriverManager.getConnection("jdbc:mysql://35.196.183.107:3306/COMPOSITEAPPS", "root","admin");
 			// here denmark is database name, roger is username and password
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from test");
