@@ -1,1 +1,7 @@
-
+job_build:
+    stage: build
+    script:
+     - mvn package -DskipTests
+ #    - mv /home/gitlab-runner/builds/6mY4N_-W/0/akshaytiwari29/seleniumwebapp/target/WebApp.war  /opt/repo/WebApp-$CI_PIPELINE_ID.war
+ #    - cd /opt/repo/ && ls
+             
