@@ -1,16 +1,18 @@
 
+stages:
+    - unit test
+    - selenium test
 
 
 
 
-
-job_test:
-    stage: test
+job_unit_test:
+    stage: unit test
     script:
       - mvn -Dtest=SeleniumTest test
 
-job_build:
-    stage: build
+job_selenium_test:
+    stage: selenium test
     script:
       - mvn -Dtest=LoginApplicationTests test
              
