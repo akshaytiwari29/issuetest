@@ -1,5 +1,5 @@
 job_build:
-    stage: build
+    stage: test
     script:
       - mvn -Dtest=LoginApplicationTests test
  #    - mvn package -DskipTests
