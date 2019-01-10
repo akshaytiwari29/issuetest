@@ -1,23 +1,23 @@
 stages:
-    - gitlab checkout
-    - unit test
-    - selenium test
+    - job_gitlab_checkout 
+    - job_unit_test 
+    - job_selenium_test
 
 
-job_gitlab_checkout:
-    stage: gitlab checkout
+gitlab checkout:
+    stage:job_gitlab_checkout             
     script:
       - mvn -Dtest=LoginApplicationTests test
 
 
-job_unit_test:
-    stage: unit test
+unit test:
+    stage:job_unit_test 
     script:
       - mvn -Dtest=LoginApplicationTests test
 
 
-job_selenium_test:
-    stage: selenium test
+selenium test:
+    stage: job_selenium_test 
     script:
       - mvn -Dtest=SeleniumTest test
 
