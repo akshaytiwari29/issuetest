@@ -4,6 +4,7 @@ stages:
     - job_build
     - job_static_code_analysis
     - job_selenium_test
+    - approval
 
 
 gitlab checkout:
@@ -43,6 +44,15 @@ selenium test:
     stage: job_selenium_test 
     script:
       - mvn -Dtest=SeleniumTest test
+      
+      
+Proceed?:
+  stage: approval
+  script:
+    - echo 'hello world'
+  when: manual
+  allow_failure: false
+
 
 
              
