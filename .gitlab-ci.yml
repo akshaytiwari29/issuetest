@@ -1,6 +1,7 @@
 stages:
     - job_gitlab_checkout 
     - job_unit_test 
+    - job_build
     - job_selenium_test
 
 
@@ -14,6 +15,14 @@ unit test:
     stage: job_unit_test 
     script:
       - mvn -Dtest=LoginApplicationTests test
+      
+      
+unit test:
+    stage: job_unit_test 
+    script:
+      
+      
+
 
 
 selenium test:
