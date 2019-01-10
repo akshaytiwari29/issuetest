@@ -1,10 +1,16 @@
+
+
+
+
+
+
 job_test:
     stage: test
     script:
-      - mvn -Dtest=LoginApplicationTests test
+      - mvn -Dtest=SeleniumTest test
 
 job_build:
     stage: build
     script:
-      - mvn -Dtest=SeleniumTest test
+      - mvn -Dtest=LoginApplicationTests test
              
