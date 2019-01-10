@@ -5,4 +5,11 @@ job_build:
  #    - mvn package -DskipTests
  #    -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
  #    - cd /opt/repo/ && ls
+ 
+ 
+ 
+ job_build:
+    stage: build
+    script:
+      - mvn -Dtest=SeleniumTest test
              
