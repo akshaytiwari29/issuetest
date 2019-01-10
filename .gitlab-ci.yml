@@ -17,9 +17,13 @@ unit test:
       - mvn -Dtest=LoginApplicationTests test
       
       
-unit test:
-    stage: job_unit_test 
+maven_build:
+    stage: job_build 
     script:
+     - mvn package -DskipTests
+#     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
+#     - cd /opt/repo/ && ls
+
       
       
 
