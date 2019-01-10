@@ -1,7 +1,8 @@
 job_build:
     stage: build
     script:
-     - mvn package -DskipTests
-     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
+      - mvn test
+ #    - mvn package -DskipTests
+ #    -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
  #    - cd /opt/repo/ && ls
              
