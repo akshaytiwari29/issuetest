@@ -2,6 +2,7 @@ stages:
     - job_gitlab_checkout 
     - job_unit_test 
     - job_build
+    - job_static_code_analysis
     - job_selenium_test
 
 
@@ -23,6 +24,15 @@ maven_build:
      - mvn package -DskipTests
 #     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
 #     - cd /opt/repo/ && ls
+
+
+
+static_code_analysis:
+   stage: job_static_code_analysis
+   script:
+    - git clone https://github.com/akshaytiwari29/GitlabDemo.git
+    - cd GitlabDemo
+    - mvn clean package sonar:sonar -Dsonar.host.url=http://34.73.203.147:9000 -Dsonar.login=9538dad60e63bd29c77f9635031acba64042015d
 
       
       
