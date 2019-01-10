@@ -5,13 +5,13 @@ stages:
 
 
 gitlab checkout:
-    stage:job_gitlab_checkout             
+    stage: job_gitlab_checkout             
     script:
       - mvn -Dtest=LoginApplicationTests test
 
 
 unit test:
-    stage:job_unit_test 
+    stage: job_unit_test 
     script:
       - mvn -Dtest=LoginApplicationTests test
 
