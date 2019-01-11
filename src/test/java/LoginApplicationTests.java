@@ -65,7 +65,7 @@ public class LoginApplicationTests {
     public void testMul() {
       Calculator calc = new Calculator();
       int expected = 4;
-      int actual = calc.mul(2,1);
+      int actual = calc.mul(2,2);
       assertEquals("adding 3 and 4", expected, actual);
     }
     
@@ -74,7 +74,7 @@ public class LoginApplicationTests {
     public void testMull() {
       Calculator calc = new Calculator();
       int expected = 4;
-      int actual = calc.mul(2,1);
+      int actual = calc.mul(2,2);
       assertEquals("adding 3 and 4", expected, actual);
     }
    
