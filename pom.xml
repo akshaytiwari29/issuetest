@@ -11,7 +11,9 @@
 	<properties>
     <sonar.exclusions>
           
-      src/main/java/abc/LoginPageServlet.java
+      
+   GitlabWebApp/src/main/java/abc/LoginPageServlet.java
+   GitlabWebApp/src/main/java/abc/Logincheck.java
     </sonar.exclusions>
  </properties>
 	
