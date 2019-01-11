@@ -80,22 +80,7 @@ public class LoginApplicationTests {
       assertEquals("adding 3 and 4", expected, actual);
     }
    
-    private void clickLink(String string) {
-                    // TODO Auto-generated method stub
-                    
-    }
-    private void assertTitleEquals(String string) {
-                    // TODO Auto-generated method stub
-                    
-    }
-    private void beginAt(String string) {
-                    // TODO Auto-generated method stub
-                    
-    }
-    private void assertLinkPresent(String string) {
-                    // TODO Auto-generated method stub
-                    
-    }
+    
     @Test
 	public void whenEmptyString_thenAccept() {
 	    Pallindrome palindromeTester = new Pallindrome();
