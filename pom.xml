@@ -96,10 +96,8 @@
 					</configuration>
 				</configuration>
 			</plugin>
-
-		</plugins>
-		
-		  <plugin>
+			
+			 <plugin>
         <!-- Code coverage plugin. -->
         <!-- This sets up code coverage for the unit tests, the integration tests, -->
         <!-- and the combined coverage of both. -->
@@ -172,6 +170,10 @@
           </execution>
         </executions>
       </plugin>
+
+		</plugins>
+		
+		 
 
 
 		<finalName>WebApp</finalName>
