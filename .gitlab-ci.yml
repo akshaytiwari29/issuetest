@@ -1,3 +1,15 @@
+image: maven:latest
+
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+
 stages:
     - job_gitlab_checkout 
     - job_unit_test 
@@ -10,19 +22,19 @@ stages:
 gitlab checkout:
     stage: job_gitlab_checkout             
     script:
-      - mvn -Dtest=LoginApplicationTests test
+      - mvn $MAVEN_CLI_OPTS deploy -Dtest=LoginApplicationTests test
 
 
 unit test:
     stage: job_unit_test 
     script:
-      - mvn -Dtest=LoginApplicationTests test
+      - mvn $MAVEN_CLI_OPTS deploy -Dtest=LoginApplicationTests test
       
       
 maven_build:
     stage: job_build 
     script:
-     - mvn package -DskipTests
+     - mvn $MAVEN_CLI_OPTS deploy package -DskipTests
 #     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
 #     - cd /opt/repo/ && ls
 
@@ -31,9 +43,9 @@ maven_build:
 static_code_analysis:
    stage: job_static_code_analysis
    script:
-    - git clone https://github.com/akshaytiwari29/GitlabDemo.git
-    - cd GitlabDemo
-    - mvn clean package sonar:sonar -Dsonar.host.url=http://34.73.203.147:9000 -Dsonar.login=9538dad60e63bd29c77f9635031acba64042015d
+#    - git clone https://github.com/akshaytiwari29/GitlabDemo.git
+#    - cd GitlabDemo
+    - mvn $MAVEN_CLI_OPTS deploy clean package sonar:sonar -Dsonar.host.url=http://34.73.115.229:9000 -Dsonar.login=638514de48758123c1ba98da3607f63187da9d3b
 
       
       
@@ -43,7 +55,7 @@ static_code_analysis:
 selenium test:
     stage: job_selenium_test 
     script:
-      - mvn -Dtest=SeleniumTest test
+      - mvn $MAVEN_CLI_OPTS deploy -Dtest=SeleniumTest test
       
       
 Proceed?:
