@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import abc.CreatingAccount;
+
 public class LoginApplicationTests {
 
 	@Test
@@ -23,6 +25,16 @@ public class LoginApplicationTests {
         clickLink("Error");
         assertTitleEquals("Error");
     }
+    
+   
+    @Test
+      public  void testInsertAccount()
+      {
+      CreatingAccount ca = new CreatingAccount();
+      ca.createAccount("TestclassAcc1");
+      
+      }
+   
     private void clickLink(String string) {
                     // TODO Auto-generated method stub
                     
