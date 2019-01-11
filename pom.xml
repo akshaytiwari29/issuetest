@@ -12,6 +12,7 @@
     <sonar.exclusions>
         src/main/java/abc/LoginPageServlet.java
         src/main/java/abc/Connectivity.java
+        src/main/java/abc/DBUtil.java
           
   
     </sonar.exclusions>
