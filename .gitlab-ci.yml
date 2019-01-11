@@ -36,7 +36,7 @@ maven_build:
     script:
      - mvn $MAVEN_CLI_OPTS  package -DskipTests
      - cd /builds/akshaytiwari29/GitlabWebApp/target/
-     - mvn deploy:*.war
+     - mvn deploy:WebApp.war
 #     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
 #     - cd /opt/repo/ && ls
 
