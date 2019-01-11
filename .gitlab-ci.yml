@@ -22,7 +22,7 @@ stages:
 gitlab checkout:
     stage: job_gitlab_checkout             
     script:
-      - echo'hello world'
+      - echo 'hello world'
 
 
 unit test:
