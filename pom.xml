@@ -10,6 +10,8 @@
 	<url>http://maven.apache.org</url>
 	<properties>
     <sonar.exclusions>
+        src/main/java/abc/LoginPageServlet.java
+        src/main/java/abc/Connectivity.java
           
   
     </sonar.exclusions>
