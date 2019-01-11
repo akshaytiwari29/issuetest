@@ -11,7 +11,7 @@ cache:
 
 
 stages:
-    - job_gitlab_checkout 
+#    - job_gitlab_checkout 
     - job_unit_test 
     - job_build
     - job_static_code_analysis
@@ -19,15 +19,16 @@ stages:
     - approval
 
 
-gitlab checkout:
-    stage: job_gitlab_checkout             
-    script:
-      - echo 'hello world'
+#gitlab checkout:
+#    stage: job_gitlab_checkout             
+#    script:
+#      - echo 'hello world'
 
 
 unit test:
     stage: job_unit_test 
     script:
+      - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=false
       - mvn $MAVEN_CLI_OPTS  -Dtest=LoginApplicationTests test
       
       
