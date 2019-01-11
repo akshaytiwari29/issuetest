@@ -28,14 +28,15 @@ stages:
 unit test:
     stage: job_unit_test 
     script:
-      - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=true
+#      - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=true
       - mvn $MAVEN_CLI_OPTS  -Dtest=LoginApplicationTests test
       
       
 maven_build:
     stage: job_build 
     script:
-      - mvn $MAVEN_CLI_OPTS deploy -DskipTests
+      - echo 'hello world'
+ #    - mvn $MAVEN_CLI_OPTS deploy -DskipTests
   #   - mvn $MAVEN_CLI_OPTS  package -DskipTests
   #   - cd /builds/akshaytiwari29/GitlabWebApp/target/
      
