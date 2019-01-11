@@ -22,19 +22,19 @@ stages:
 gitlab checkout:
     stage: job_gitlab_checkout             
     script:
-      - mvn $MAVEN_CLI_OPTS deploy -Dtest=LoginApplicationTests test
+      - echo'hello world'
 
 
 unit test:
     stage: job_unit_test 
     script:
-      - mvn $MAVEN_CLI_OPTS deploy -Dtest=LoginApplicationTests test
+      - mvn $MAVEN_CLI_OPTS  -Dtest=LoginApplicationTests test
       
       
 maven_build:
     stage: job_build 
     script:
-     - mvn $MAVEN_CLI_OPTS deploy package -DskipTests
+     - mvn $MAVEN_CLI_OPTS  package -DskipTests
 #     -  mv /var/lib/gitlab-runner/builds/a6mStEt3/0/akshaytiwari29/GitlabWebApp/target/sample123.war  /var/lib/tomcat8/webapps/
 #     - cd /opt/repo/ && ls
 
@@ -45,7 +45,7 @@ static_code_analysis:
    script:
 #    - git clone https://github.com/akshaytiwari29/GitlabDemo.git
 #    - cd GitlabDemo
-    - mvn $MAVEN_CLI_OPTS deploy clean package sonar:sonar -Dsonar.host.url=http://34.73.115.229:9000 -Dsonar.login=638514de48758123c1ba98da3607f63187da9d3b
+    - mvn $MAVEN_CLI_OPTS  clean package sonar:sonar -Dsonar.host.url=http://34.73.115.229:9000 -Dsonar.login=638514de48758123c1ba98da3607f63187da9d3b
 
       
       
@@ -55,7 +55,8 @@ static_code_analysis:
 selenium test:
     stage: job_selenium_test 
     script:
-      - mvn $MAVEN_CLI_OPTS deploy -Dtest=SeleniumTest test
+       - echo 'hello world'
+  #    - mvn $MAVEN_CLI_OPTS  -Dtest=SeleniumTest test
       
       
 Proceed?:
