@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import abc.CreatingAccount;
 
+import abc.Pallindrome;
+
 public class LoginApplicationTests {
 
 	@Test
