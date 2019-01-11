@@ -28,6 +28,7 @@ stages:
 unit test:
     stage: job_unit_test 
     script:
+      -  - mvn  $MAVEN_CLI_OPTS sonar:sonar -DskipTests -Dsonar.host.url=http://34.73.115.229:9000 -Dsonar.login=638514de48758123c1ba98da3607f63187da9d3b
 #      - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=true
       - mvn $MAVEN_CLI_OPTS  -Dtest=LoginApplicationTests test
       
