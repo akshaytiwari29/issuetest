@@ -11,7 +11,7 @@
 	<properties>
     <sonar.exclusions>
           
-      src/main/java/abc/*.java
+      src/main/java/abc/LoginPageServlet.java
     </sonar.exclusions>
  </properties>
 	
