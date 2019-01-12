@@ -2,9 +2,11 @@ stages:
     - job_gitlab_checkout 
     - job_unit_test 
     - job_build
+    - job_deploy_QA
     - job_static_code_analysis
     - job_selenium_test
     - approval
+    - job_deploy_PROD
 
 
 gitlab checkout:
@@ -30,6 +32,12 @@ maven_build:
 #     - cd /opt/repo/ && ls
 
 
+deploy_QA:
+   stage: job_deploy_QA
+   script:
+     - echo "hello world" 
+
+
 
 static_code_analysis:
    stage: job_static_code_analysis
@@ -40,9 +48,6 @@ static_code_analysis:
 
       
       
-
-
-
 selenium test:
     stage: job_selenium_test 
     script:
@@ -56,6 +61,14 @@ Proceed?:
     - echo 'hello world'
   when: manual
   allow_failure: false
+  
+  
+deploy_PROD:
+  stage: job_deploy_PROD
+  script:
+     -  echo "hello world"
+  when: on_success
+
 
 
 
