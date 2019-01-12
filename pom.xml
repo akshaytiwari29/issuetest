@@ -8,15 +8,7 @@
 	<version>2.0-SNAPSHOT</version>
 	<name>sample123 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<properties>
-    <sonar.exclusions>
-        src/main/java/abc/LoginPageServlet.java
-        src/main/java/abc/Connectivity.java
-        src/main/java/abc/DBUtil.java
-          
-  
-    </sonar.exclusions>
- </properties>
+	
 	
 	<dependencies>
 
@@ -108,6 +100,14 @@
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.7.7.201606060606</version>
+    
+    <configuration>
+<excludes>     
+<exclude>src/main/java/abc/LoginPageServlet.java</exclude>
+<exclude>src/main/java/abc/DBUtil.java</exclude>
+<exclude>src/main/java/abc/Connectivity.java</exclude>
+</excludes>
+ </configuration>
 </plugin>
 			
 
