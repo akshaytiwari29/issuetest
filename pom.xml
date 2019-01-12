@@ -73,7 +73,7 @@
 	<snapshotRepository>
             <id>central</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://34.73.115.229:8081/nexus/content/repositories/NewGitlabDemo/</url>
+            <url>http://34.73.115.229:8081/nexus/content/repositories/GitlabWebApp/</url>
         </snapshotRepository>
 
 	</distributionManagement>
