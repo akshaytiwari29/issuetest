@@ -95,20 +95,6 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M3</version>
         </plugin>
-        
-        <plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.7.7.201606060606</version>
-    
-    <configuration>
-<excludes>     
-<exclude>src/main/java/abc/LoginPageServlet.java</exclude>
-<exclude>src/main/java/abc/DBUtil.java</exclude>
-<exclude>src/main/java/abc/Connectivity.java</exclude>
-</excludes>
- </configuration>
-</plugin>
 			
 
 		</plugins>
