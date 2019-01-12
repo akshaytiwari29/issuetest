@@ -2,8 +2,8 @@ stages:
     - job_gitlab_checkout 
     - job_unit_test 
     - job_build
-    - job_deploy_QA
     - job_static_code_analysis
+    - job_deploy_QA
     - job_selenium_test
     - approval
     - job_deploy_PROD
@@ -32,12 +32,6 @@ maven_build:
 #     - cd /opt/repo/ && ls
 
 
-deploy_QA:
-   stage: job_deploy_QA
-   script:
-     - echo "hello world" 
-
-
 
 static_code_analysis:
    stage: job_static_code_analysis
@@ -46,6 +40,11 @@ static_code_analysis:
        - cd akshay1
        -  mvn  clean package sonar:sonar -Dmaven.test.failure.ignore=true -Dsonar.host.url=http://34.73.115.229:9000 -Dsonar.login=08bd28b5752ee16563b268013dd48b4c3b0c0d2f
 
+
+deploy_QA:
+   stage: job_deploy_QA
+   script:
+     - echo "hello world" 
       
       
 selenium test:
