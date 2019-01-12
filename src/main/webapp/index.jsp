@@ -2,7 +2,7 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 <style>
                 body {
-  background:url('redimage.jpg');
+  background:url('blueimage.jpg');
   margin:0px;
   font-family: 'Ubuntu', sans-serif;
                 background-size: 100% 110%;
