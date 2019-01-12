@@ -2,7 +2,7 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 <style>
                 body {
-  background:url('https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg');
+  background:url('redimage.jpg');
   margin:0px;
   font-family: 'Ubuntu', sans-serif;
                 background-size: 100% 110%;
