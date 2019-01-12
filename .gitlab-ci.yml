@@ -52,7 +52,7 @@ selenium test:
     stage: job_selenium_test 
     script:
        - echo 'hello world'
-       - mvn $MAVEN_CLI_OPTS  -Dtest=SeleniumTest test
+       - mvn $MAVEN_CLI_OPTS  -Dtest=SeleniumTest test -Dmaven.test.failure.ignore=true
       
       
 Proceed?:
