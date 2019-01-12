@@ -91,24 +91,62 @@
 			</plugin>
 			
 			 <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M3</version>
-        </plugin>
-        
-        <plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.7.7.201606060606</version>
-    
-    <configuration>
-<excludes>     
-<exclude>src/main/java/abc/LoginPageServlet.java</exclude>
-<exclude>src/main/java/abc/DBUtil.java</exclude>
-<exclude>src/main/java/abc/Connectivity.java</exclude>
-</excludes>
- </configuration>
-</plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-surefire-plugin</artifactId>
+         <version>2.18</version>
+             <executions>
+                <execution>
+                    <id>default-test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                    <configuration>
+                        <systemPropertyVariables>
+                            <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+                        </systemPropertyVariables>
+                        <forkMode>once</forkMode>
+                        <argLine>-Xms1024m -Xmx2048m -XX:MaxPermSize=1024m</argLine>                </execution>
+            </executions>
+     </plugin>
+     <plugin> 
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.7.4.201502262128</version>        <executions>
+            <execution>
+                <id>default-instrument</id>
+                <goals>
+                    <goal>instrument</goal>
+                </goals>
+            </execution> 
+            <execution>
+                <id>default-restore-instrumented-classes</id>
+                <goals>
+                    <goal>restore-instrumented-classes</goal>
+                </goals>
+            </execution>
+           <execution>
+                <id>default-report</id>
+                <phase>prepare-package</phase>
+                <goals>
+                    <goal>report</goal>
+                </goals>
+            </execution>  
+            <execution>
+                <id>default-check</id>
+                <goals>
+                    <goal>check</goal>
+                </goals>
+                <configuration>
+                    <rules>
+                        <rule>
+                            <element>METHOD</element>
+                        </rule>
+                    </rules>
+                </configuration>
+            </execution>
+        </executions>
+     </plugin>
 			
 
 		</plugins>
