@@ -22,7 +22,7 @@
  
     <changeSet id="10-01-2019-USERS-TABLE-UPDATE" author="ingimar" runOnChange="true">
             <update tableName="USERS">
-                <column name="TITLE" value='Welcome User .....!'></column>
+                <column name="TITLE" value='Welcome to demo'></column>
             </update> 
     </changeSet>
 
