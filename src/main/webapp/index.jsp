@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6, a {
   </div>
  
   <div class="login-form">
-    <label for="uname"><b>Username</b></label>
+    <label for="uname"><b>Username </b></label>
     <input type="text" placeholder="Enter Username" name="uname" id="uname" >
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" >
